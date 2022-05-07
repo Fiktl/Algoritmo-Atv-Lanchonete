@@ -1,0 +1,64 @@
+algoritmos "vendas em lanchonete"
+    ínicio
+        var
+        sair,qntd,opção:inteiro
+        conta,conta_gorj:real
+        sair <- 0   //favor considerar "<-" como "recebe"
+        conta <- 0
+        qntd <- 0
+        conta_gorj <- 0
+             enquanto* (sair==0) *faça*
+             printf("Cardápio:(1)Hamburguer:|R$30,00(2)Cheeseburguer:|R$35,50(3)Fritas:|R$20,00(4)Refrigerante lata:|R$6,50(5)Milkshake:|R$30,00(6)Cerveja lata:R$8,50");
+             escreva("Selecione o item desejado de acordo com seu número no Cardápio")
+             escreva("Digite 0 para sair")
+             leia (opção)
+             
+                escolha(opção)
+                  caso 0
+                    conta_gorj=Multiplicação(conta,1.1)
+                    escreva("O pedido ficou no valor de:R$",conta)
+                    escreva("Com um adicional de 10%, o total fica:R$",conta_gorj)
+                    sair <- 1
+                  caso 1 
+                    escreva("Digite a quantidade:")
+                    leia(qntd)
+                    escreva("Voce adicionou Hamburguer", qntd)
+                    conta <- Multiplicação(30,qntd)
+                    qntd <- 0
+                  caso 2
+                    escreva("Digite a quantidade:")
+                    leia(qntd)
+                    escreva("Voce adicionou Cheeseburguer", qntd)
+                    conta <- Multiplicação(35.50,qntd)
+                    qntd <- 0
+                  caso 3
+                    escreva("Digite a quantidade:")
+                    leia(qntd)
+                    escreva("Voce adicionou Fritas", qntd)
+                    conta <- Multiplicação(20.0,qntd)
+                    qntd <- 0
+                  caso 4
+                    escreva("Digite a quantidade:")
+                    leia(qntd)
+                    escreva("Voce adicionou Refrigerante lata", qntd)
+                    conta <- Multiplicação(6.50,qntd)
+                    qntd <- 0
+                  caso 5
+                    escreva("Digite a quantidade:")
+                    leia(qntd)
+                    escreva("Voce adicionou Milkshake", qntd)
+                    conta <- Multiplicação(30,qntd)
+                    qntd <- 0
+                  caso 6
+                    escreva("Digite a quantidade:")
+                    leia(qntd)
+                    escreva("Voce adicionou Cerveja lata", qntd)
+                    conta <- Multiplicação(8.50,qntd)
+                    qntd <- 0
+                  padrão
+                    escreva("|||Digite um valor válido|||")
+                    
+                fim escolha
+            fim enquanto
+     
+    fim algoritmo
